@@ -63,7 +63,7 @@ function checkNumber(key, value)
 function checkInteger(key, value)
 {
   if(!Number.isInteger(value))
-    throw ChecktypeError(key, Integer, value);
+    throw ChecktypeError(key, 'Integer', value);
 };
 
 function checkObject(key, value)
@@ -156,7 +156,8 @@ function checkMethodParams(callparams, method_params)
 
 module.exports = checkType;
 
-checkType.checkParams = checkParams;
+checkType.checkParams    = checkParams;
+checkType.ChecktypeError = ChecktypeError;
 
 
 // Basic types
