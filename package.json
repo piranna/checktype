@@ -1,6 +1,6 @@
 {
   "name": "checktype",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Check the type of variables and parametes, also user defined",
   "main": "index.js",
   "scripts": {

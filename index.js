@@ -28,7 +28,7 @@ if (!Number.isInteger) {
 }
 
 
-function ChecktypeError(key, type, object)
+function ChecktypeError(key, type, value)
 {
   return SyntaxError(key + ' param should be a ' + (type.name || type)
                     + ', not ' + value.constructor.name);
