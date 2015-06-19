@@ -44,8 +44,10 @@ function checkArray(type, key, value)
   if(!(value instanceof Array))
     throw ChecktypeError(key, 'Array of '+type, value);
 
-  for(var i=0, item; item=value[i]; i++)
+  value.forEach(function(item, i)
+  {
     checkType(type, key+'['+i+']', item);
+  })
 };
 
 function checkBoolean(key, value)
@@ -152,6 +154,7 @@ function checkMethodParams(callparams, method_params)
 
 module.exports = checkType;
 
+checkType.checkArray     = checkArray;
 checkType.checkParams    = checkParams;
 checkType.ChecktypeError = ChecktypeError;
 
